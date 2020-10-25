@@ -1,34 +1,24 @@
-.login-form-buttons {
+.register-form-buttons {
     text-align: center;
 }
-.login-form-buttons button {
+.register-form-buttons button {
     padding: 10px 50px;
     font-size: 18px;
 }
 
-.login-form {
+.register-form {
     max-width: 400px;
     margin: 50px auto;
 }
 
-.login-form h1 {
+.register-form h1 {
     text-align: center;
 }
 
-.login-form h1 img {
+.register-form h1 img {
     vertical-align: middle;
     animation: App-logo-spin infinite 5s linear;
 }
-.error-message {
-    background-color: #fce4e4;
-    border: 1px solid #fcc2c3;
-    padding: 10px 30px;
-    margin-bottom: 10px;
-  }
-
-  .register-style {
-    padding-left: 15px;
-  }
 
 @keyframes App-logo-spin {
     from {

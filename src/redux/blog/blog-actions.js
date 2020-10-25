@@ -2,7 +2,9 @@ import {
     BLOG_UPDATE_LIST,
     BLOG_ADD_ITEM,
     BLOG_EDIT_ITEM,
-    BLOG_REMOVE_ITEM
+    BLOG_REMOVE_ITEM,
+    BLOG_LOGIN,
+    BLOG_REGISTER
 } from './blog-constants';
 import { createApiActions } from './blog-api';
 
@@ -31,6 +33,20 @@ export function removeBlog(blog) {
     return {
         type: BLOG_REMOVE_ITEM,
         payload: blog
+    };
+}
+
+export function login(loginData) {
+    return {
+        type: BLOG_LOGIN,
+        payload: loginData
+    };
+}
+
+export function register(registerData) {
+    return {
+        type: BLOG_REGISTER,
+        payload: registerData
     };
 }
 

@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
 import { Routes } from './routes';
 import { Login } from './components/pages/login/login';
+import {Register} from './components/pages/register/register'
 
 class AppBase extends React.Component {
     componentDidMount() {
@@ -17,6 +18,7 @@ class AppBase extends React.Component {
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/" component={Login} />
+                    <Route exact path="/register" component={Register} />
                     <Route
                         render={() => (
                             <Container>

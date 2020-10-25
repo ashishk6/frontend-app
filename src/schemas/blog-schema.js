@@ -12,9 +12,24 @@ export const blogSchema = yup.object().shape({
 });
 
 export const loginSchema = yup.object().shape({
-    email: yup
+    emailId: yup
         .string()
         .email('Email is Invalid')
         .required('Email is required!'),
     password: yup.string().required('Password is required!')
+});
+
+export const RegisterSchema = yup.object().shape({
+    emailId: yup
+        .string()
+        .email('Email is Invalid')
+        .required('Email is required!'),
+    password: yup.string().required('Password is required!'),
+    firstName: yup
+    .string()
+    .required('First Name is required!'),
+    password: yup.string().required('Password is required!'),
+    lastName: yup
+    .string()
+    .required('Last Name is required!')
 });

@@ -2,11 +2,16 @@ import {
     BLOG_UPDATE_LIST,
     BLOG_ADD_ITEM,
     BLOG_REMOVE_ITEM,
-    BLOG_EDIT_ITEM
+    BLOG_EDIT_ITEM,
+    BLOG_LOGIN,
+    BLOG_REGISTER
 } from './blog-constants';
 
 const initialState = {
-    list: []
+    list: [],
+    isLoginSuccess: false,
+    isFreshLogin: false,
+    isRegisterSuccess: true
 };
 
 function editBlogItem(state, item) {
@@ -50,6 +55,16 @@ export function blog(state = initialState, action) {
 
         case BLOG_REMOVE_ITEM:
             return removeBlogItem(state, action.payload.id);
+        
+        case BLOG_LOGIN:
+        return {...state, isLoginSuccess: action.payload, 
+            isFreshLogin: true
+        }
+        case BLOG_REGISTER: 
+        return {
+            ...state, userDetails: action.payload,
+            isRegisterSuccess: true
+        }
 
         default:
             return state;
