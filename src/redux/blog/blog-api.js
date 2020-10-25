@@ -1,5 +1,5 @@
 import { addBlog, removeBlog, editBlog, blogList } from './blog-actions';
-import { BLOG_URL, BLOG_FETCH_URL, BLOG_ADD_URL, BLOG_EDIT_URL, BLOG_DELETE_URL } from '../../constants/urls';
+import {  BLOG_FETCH_URL, BLOG_ADD_URL, BLOG_EDIT_URL, BLOG_DELETE_URL } from '../../constants/urls';
 
 export function createApiActions(fetch) {
     return {
