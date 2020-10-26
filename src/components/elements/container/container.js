@@ -9,14 +9,12 @@ export const Container = ({ children }) => (
     <div className="container">
         <header className="header">
             <div className="header-logo">
-                <Link className="link" to="/">
                     <img
                         className="header-logo-image"
                         src={logoUrl}
                         alt="logo"
                     />
                     <span className="header-logo-text">My Blog</span>
-                </Link>
             </div>
             <nav className="header-menu">
                 <Link className="link" to="/">
@@ -31,7 +29,7 @@ export const Container = ({ children }) => (
         </header>
         <main className="content">{children}</main>
         <footer className="footer">
-            Copyright &copy; 2019 rights reserved
+            Copyright &copy; 2020 rights reserved
         </footer>
     </div>
 );

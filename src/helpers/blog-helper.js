@@ -6,7 +6,7 @@ export function generateId(obj) {
 }
 
 export function dateFormat(date) {
-    return moment(date).format('MMM D YYYY HH:mm');
+    return moment(parseInt(date)).format('MMM D YYYY HH:mm');
 }
 
 export function filterBlogs(search) {
