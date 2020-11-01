@@ -7,7 +7,7 @@ import { blogApiActions } from '../../../redux/blog/blog-actions';
 class RegisterBase extends React.Component {
     componentDidUpdate() {
         if(this.props.isRegisterSuccess) {
-            this.props.history.push('/login');
+            this.props.history.push('/');
         }
     }
 
