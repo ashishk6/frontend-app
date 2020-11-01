@@ -6,8 +6,8 @@ import { blogApiActions } from '../../../redux/blog/blog-actions';
 
 class RegisterBase extends React.Component {
     componentDidUpdate() {
-        if(this.props.userDetails) {
-            this.props.history.push('/blogs');
+        if(this.props.isRegisterSuccess) {
+            this.props.history.push('/login');
         }
     }
 
@@ -34,7 +34,7 @@ class RegisterBase extends React.Component {
 export const Register = withRouter(
     connect(
         state => ({
-            userDetails: state.blog.userDetails
+            isRegisterSuccess: state.blog.isRegisterSuccess
         }),
         {
             registerBlog: blogApiActions.register

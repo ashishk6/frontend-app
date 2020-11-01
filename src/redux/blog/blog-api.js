@@ -87,7 +87,7 @@ export function createApiActions(fetch) {
                     body: JSON.stringify(blog)
                 });
                 if (response.status === 200) {
-                    dispatch(register(await response.json()));
+                    dispatch(register(true));
                 }
             };
         },

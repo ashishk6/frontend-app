@@ -11,7 +11,7 @@ const initialState = {
     list: [],
     isLoginSuccess: false,
     isFreshLogin: false,
-    isRegisterSuccess: true
+    isRegisterSuccess: false
 };
 
 function editBlogItem(state, item) {
@@ -62,8 +62,8 @@ export function blog(state = initialState, action) {
         }
         case BLOG_REGISTER: 
         return {
-            ...state, userDetails: action.payload,
-            isRegisterSuccess: true
+            ...state,
+            isRegisterSuccess: action.payload
         }
 
         default:
